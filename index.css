@@ -39,7 +39,7 @@ html {
 
 .main-container {
   border-radius: 0.3em;
-  margin: 0 auto;
+  margin: 2em auto;
   background-color: rgba(255, 255, 255, 1);
   padding: 20px;
   width: 210mm;
@@ -47,7 +47,7 @@ html {
 }
 
 header {
-  padding: 0.6em;
+  padding: 1em 0.6em 0.6em 0.6em;
   background: linear-gradient(
     164.01deg,
     #212834 -44.88%,
@@ -60,7 +60,7 @@ header li {
   color: var(--white);
   font-family: inherit;
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   /* letter-spacing: 0.05em; */
 }
@@ -71,6 +71,8 @@ a {
 }
 
 h1 {
+  /* text-transform: uppercase; */
+  letter-spacing: 0.09em;
   font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
@@ -134,6 +136,7 @@ main {
 .section-content-box {
   margin-top: 1.6em;
   display: flex;
+  padding-right: 1em;
 }
 
 .left-side-ruler {
@@ -149,7 +152,6 @@ main {
 
 .section-paragraph {
   margin-bottom: 1.3em;
-  padding-right: var(--right-most-padding);
 }
 
 .section-paragraph:last-of-type {
@@ -159,7 +161,6 @@ main {
 ------------------------------------------------------------*/
 .table-container {
   width: 100%;
-  padding-right: var(--right-most-padding);
 }
 
 table {
@@ -241,4 +242,10 @@ tbody tr {
 
 .bolded {
   font-weight: 700;
+}
+
+@media print {
+  .experience {
+    margin-bottom: 5em;
+  }
 }
