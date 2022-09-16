@@ -65,13 +65,22 @@ header li {
   /* letter-spacing: 0.05em; */
 }
 
-a {
+header a {
   text-decoration: none;
   color: inherit;
+  transition: 0.1s ease-out;
 }
 
-a:hover {
+header a:hover {
   border-bottom: 1px solid var(--white);
+}
+
+.hover:hover {
+  transform: translate(0, -1px);
+}
+
+.hover:active {
+  transform: none;
 }
 
 h1 {
@@ -91,6 +100,7 @@ h1 {
 
 .contact-list-item {
   margin: 1em;
+  transition: 0.1s ease-out;
 }
 
 .icon {
@@ -248,6 +258,26 @@ tbody tr {
   font-weight: 700;
 }
 
+.black_link {
+  transition: all 0.5s ease-out;
+  animation: bolded 1s infinite;
+  text-decoration: none;
+  color: inherit;
+}
+
+.black_link:hover {
+  border-bottom: 1px solid var(--h2-color);
+}
+
+@keyframes bolded {
+  0% {
+    font-weight: 400;
+  }
+  100% {
+    font-weight: 700;
+  }
+}
+
 @media print {
   .experience {
     margin-bottom: 5em;
@@ -262,5 +292,8 @@ tbody tr {
     padding: 20px;
     width: 210mm;
     /* border: 1px solid lightgray; */
+  }
+  .black_link {
+    font-weight: 700;
   }
 }
